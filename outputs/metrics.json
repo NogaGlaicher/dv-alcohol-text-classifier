@@ -1,0 +1,146 @@
+{
+  "C": 1,
+  "threshold": 0.57,
+  "cv_models": {
+    "lexicon rule (alcohol term found)": {
+      "precision": 0.9972,
+      "recall": 0.8114,
+      "f1": 0.8947,
+      "accuracy": 0.9045
+    },
+    "TF-IDF logistic regression": {
+      "precision": 0.9163,
+      "recall": 0.9705,
+      "f1": 0.9426,
+      "accuracy": 0.9409,
+      "roc_auc": 0.9919
+    },
+    "fusion (final), threshold 0.5": {
+      "precision": 0.9183,
+      "recall": 0.9705,
+      "f1": 0.9436,
+      "accuracy": 0.942,
+      "roc_auc": 0.9933
+    },
+    "fusion (final), threshold 0.57": {
+      "precision": 0.9853,
+      "recall": 0.9136,
+      "f1": 0.9481,
+      "accuracy": 0.95,
+      "roc_auc": 0.9933
+    }
+  },
+  "cv_ocr_views": {
+    "EasyOCR, original image": {
+      "precision": 0.8022,
+      "recall": 0.8114,
+      "f1": 0.8068,
+      "accuracy": 0.8057,
+      "roc_auc": 0.9205
+    },
+    "EasyOCR, 4 views": {
+      "precision": 0.9085,
+      "recall": 0.925,
+      "f1": 0.9167,
+      "accuracy": 0.9159,
+      "roc_auc": 0.978
+    },
+    "Paddle, 4 views": {
+      "precision": 0.897,
+      "recall": 0.95,
+      "f1": 0.9227,
+      "accuracy": 0.9205,
+      "roc_auc": 0.9879
+    },
+    "final: EasyOCR orig + Paddle 4 views": {
+      "precision": 0.9183,
+      "recall": 0.9705,
+      "f1": 0.9436,
+      "accuracy": 0.942,
+      "roc_auc": 0.9933
+    }
+  },
+  "cv": {
+    "precision": 0.9853,
+    "recall": 0.9136,
+    "f1": 0.9481,
+    "accuracy": 0.95,
+    "roc_auc": 0.9933
+  },
+  "holdout": {
+    "precision": 0.9808,
+    "recall": 0.9273,
+    "f1": 0.9533,
+    "accuracy": 0.9545,
+    "roc_auc": 0.9955
+  },
+  "ocr_term_recall": {
+    "EasyOCR, original image": {
+      "alcohol_term_found_on_alcohol": 0.4636,
+      "decoy_found_on_non_alcohol": 0.4273,
+      "alcohol_term_found_on_non_alcohol": 0.0
+    },
+    "EasyOCR, 4 views": {
+      "alcohol_term_found_on_alcohol": 0.6527,
+      "decoy_found_on_non_alcohol": 0.6327,
+      "alcohol_term_found_on_non_alcohol": 0.0
+    },
+    "Paddle, 4 views": {
+      "alcohol_term_found_on_alcohol": 0.7836,
+      "decoy_found_on_non_alcohol": 0.7455,
+      "alcohol_term_found_on_non_alcohol": 0.0036
+    },
+    "final: EasyOCR orig + Paddle 4 views": {
+      "alcohol_term_found_on_alcohol": 0.8145,
+      "decoy_found_on_non_alcohol": 0.78,
+      "alcohol_term_found_on_non_alcohol": 0.0036
+    }
+  },
+  "unseen_brands": {
+    "TF-IDF logistic regression": {
+      "precision": 0.6911,
+      "recall": 0.72,
+      "f1": 0.7053,
+      "accuracy": 0.6991,
+      "roc_auc": 0.7773
+    },
+    "fusion (final)": {
+      "precision": 0.9205,
+      "recall": 0.9473,
+      "f1": 0.9337,
+      "accuracy": 0.9327,
+      "roc_auc": 0.9905
+    }
+  },
+  "selective_prediction": [
+    {
+      "abstain_band": null,
+      "auto_decided": 1.0,
+      "accuracy_on_auto_decided": 0.951
+    },
+    {
+      "abstain_band": [
+        0.52,
+        0.62
+      ],
+      "auto_decided": 0.927,
+      "accuracy_on_auto_decided": 0.972
+    },
+    {
+      "abstain_band": [
+        0.47,
+        0.67
+      ],
+      "auto_decided": 0.873,
+      "accuracy_on_auto_decided": 0.992
+    },
+    {
+      "abstain_band": [
+        0.42,
+        0.72
+      ],
+      "auto_decided": 0.843,
+      "accuracy_on_auto_decided": 0.998
+    }
+  ]
+}

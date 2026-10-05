@@ -1,0 +1,43 @@
+# Python 3.12, CPU only (tested on Windows 11).
+#
+# Install in TWO steps (see README):
+#   pip install -r requirements.txt
+#   pip install --no-deps easyocr==1.7.2
+# EasyOCR is installed with --no-deps because it requires opencv-python-headless while
+# PaddleOCR requires opencv-contrib-python; both ship the same `cv2` module and must not be
+# installed together. All of EasyOCR's real dependencies are listed below.
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://www.paddlepaddle.org.cn/packages/stable/cpu/
+
+# --- OCR engines ---
+paddlepaddle==3.4.0
+paddleocr==3.7.0
+paddlex==3.7.2
+torch==2.14.1
+torchvision==0.29.1
+opencv-contrib-python==4.10.0.84
+# EasyOCR dependencies (easyocr itself: pip install --no-deps easyocr==1.7.2)
+ninja==1.13.2
+pyclipper==1.4.0
+python-bidi==0.6.11
+PyYAML==6.0.2
+shapely==2.1.2
+scikit-image==0.26.0
+scipy==1.18.1
+pillow==12.1.0
+
+# --- Text + ML ---
+numpy==2.3.5
+pandas==3.0.6
+scikit-learn==1.9.1
+rapidfuzz==3.14.6
+joblib==1.6.0
+tqdm==4.70.1
+
+# --- Analysis / report notebook ---
+matplotlib==3.11.2
+seaborn==0.13.2
+jupyter==1.1.1
+nbconvert==7.17.1
+ipykernel==7.4.0
